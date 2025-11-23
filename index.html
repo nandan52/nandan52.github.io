@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keyboard Vibes By Nandu</title>
+    <style>
+        /* --- CSS STYLES --- */
+        :root {
+            --primary: #8e44ad; /* Vibe Purple */
+            --accent: #ff0050; /* YouTube Red */
+            --dark: #121212;
+            --light: #ffffff;
+            --gray: #2c2c2c;
+        }
+
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--dark);
+            color: var(--light);
+            line-height: 1.6;
+        }
+
+        /* Navigation */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 5%;
+            background: rgba(18, 18, 18, 0.95);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid #333;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            background: linear-gradient(45deg, #fff, var(--primary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .nav-links a {
+            color: var(--light);
+            text-decoration: none;
+            margin-left: 20px;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        .btn-subscribe {
+            background-color: var(--accent);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: transform 0.2s;
+        }
+
+        .btn-subscribe:hover {
+            transform: scale(1.05);
+        }
+
+        /* Hero Section */
+        header.hero {
+            text-align: center;
+            padding: 80px 20px;
+            background: radial-gradient(circle at center, #2a0f36 0%, var(--dark) 70%);
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: #ccc;
+            margin-bottom: 30px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Latest Video Section */
+        .featured-video {
+            max-width: 800px;
+            margin: 0 auto 60px auto;
+            padding: 20px;
+            background: var(--gray);
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            height: 0;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        /* Video Grid */
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        h2.section-title {
+            text-align: center;
+            margin-bottom: 40px;
+            border-bottom: 2px solid var(--primary);
+            display: inline-block;
+            padding-bottom: 10px;
+        }
+
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .video-card {
+            background: var(--gray);
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+
+        .video-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .video-card h3 {
+            padding: 15px;
+            margin: 0;
+            font-size: 1.1rem;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            margin-top: 60px;
+            border-top: 1px solid #333;
+            color: #777;
+        }
+
+        .social-links {
+            margin-bottom: 20px;
+        }
+
+        .social-links a {
+            color: var(--light);
+            margin: 0 10px;
+            text-decoration: none;
+            font-size: 1.2rem;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">Keyboard Vibes By Nandu</div>
+        <div class="nav-links">
+            <a href="#latest">Latest</a>
+            <a href="#popular">Popular Covers</a>
+            <a href="#about">About</a>
+            <a href="https://www.youtube.com/@keyboardvibes_nandan" target="_blank" class="btn-subscribe">Subscribe</a>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <h1>Feel the Music</h1>
+        <p class="subtitle">Immersive keyboard covers, tutorials, and musical vibes. Welcome to the official world of Nandu.</p>
+    </header>
+
+    <section id="latest" class="container">
+        <div style="text-align: center;">
+            <h2 class="section-title">Latest Release</h2>
+        </div>
+        <div class="featured-video">
+            <div class="video-wrapper">
+                <iframe src="https://www.youtube.com/embed/vrVjIT6pFDA" title="Latest Video" allowfullscreen></iframe>
+            </div>
+        </div>
+    </section>
+
+    <section id="popular" class="container">
+        <div style="text-align: center;">
+            <h2 class="section-title">Popular Vibes</h2>
+        </div>
+        
+        <div class="video-grid">
+            <div class="video-card">
+                <div class="video-wrapper">
+                    <iframe src="https://www.youtube.com/embed/T1MB3BErEVk" allowfullscreen></iframe>
+                </div>
+                <h3>Emotional Piano Cover</h3>
+            </div>
+
+            <div class="video-card">
+                <div class="video-wrapper">
+                    <iframe src="https://www.youtube.com/embed/H_LhTjv2Wlo" allowfullscreen></iframe>
+                </div>
+                <h3>Relaxing Lo-Fi Vibes</h3>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="container" style="text-align: center; margin-top: 50px;">
+        <h2 class="section-title">About Nandu</h2>
+        <p style="max-width: 700px; margin: auto; color: #ccc;">
+            Hi, I'm Nandan. I create keyboard covers and musical arrangements designed to set the perfect vibe. 
+            Whether you are looking to relax, study, or learn how to play, you've come to the right place.
+        </p>
+    </section>
+
+    <footer>
+        <div class="social-links">
+            <a href="#">YouTube</a>
+            <a href="#">Instagram</a>
+            <a href="#">Twitter</a>
+        </div>
+        <p>&copy; 2024 Keyboard Vibes By Nandu. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
