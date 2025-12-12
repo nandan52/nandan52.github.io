@@ -29,7 +29,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 20px 5%;
+            padding: 10px 5%; /* Reduced padding slightly to accommodate logo */
             /* Use a slightly lighter dark color for the nav bar for depth */
             background: rgba(20, 23, 31, 0.95); 
             position: sticky;
@@ -38,13 +38,16 @@
             border-bottom: 1px solid #333;
         }
 
-        .logo {
-            font-size: 1.5rem;
-            font-weight: bold;
-            /* Gradient for logo uses your brand colors */
-            background: linear-gradient(45deg, var(--primary), var(--accent)); 
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+        /* Logo Styling - NOW FOR THE IMAGE */
+        .logo-link {
+            display: flex;
+            align-items: center;
+            height: 40px; /* Set height for alignment */
+        }
+        
+        .logo-img {
+            height: 40px; /* Set the height of the image */
+            width: auto;
         }
 
         .nav-links a {
@@ -250,7 +253,10 @@
 <body>
 
     <nav>
-        <div class="logo">Keyboard Vibes By Nandu</div>
+        <a href="#" class="logo-link">
+            <img src="logo.jpg" alt="Keyboard Vibes By Nandu Logo" class="logo-img">
+        </a>
+        
         <div class="nav-links">
             <a href="#request">Request a Song</a> 
             <a href="#latest">Latest</a>
@@ -281,7 +287,7 @@
             <div class="request-buttons">
                 <a href="mailto:sasi.bharadwaj@gmail.com?subject=Song%20Request%20for%20Keyboard%20Vibes" class="btn-request">Email Your Song Request</a>
                 
-                <a href="tel:+91 90428 16291" class="btn-request call-btn">Call or WhatsApp Now</a>
+                <a href="tel:+919042816291" class="btn-request call-btn">Call or WhatsApp Now</a>
             </div>
 
         </div>
@@ -341,4 +347,3 @@
 
 </body>
 </html>
-
